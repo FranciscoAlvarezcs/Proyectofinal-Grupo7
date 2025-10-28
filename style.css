@@ -1,0 +1,32 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.about-section {
+  background: linear-gradient(100deg, #b1303e, #4b0034);
+  max-width: 1100px;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 8px solid #fff;
+  display: inline-block;
+  padding-bottom: 0px;
+  font-size: 58px;
+}
+
+.about-section img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .about-section img {
+    border-top-right-radius: 1rem;
+  }
+}
