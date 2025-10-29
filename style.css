@@ -6,28 +6,41 @@ body {
 }
 
 .about-section {
-  background: linear-gradient(100deg, #b1303e, #4b0034);
+  background: linear-gradient(260deg, #b1303e, #4b0034);
   max-width: 1100px;
   border-radius: 1rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.about-section article {
+  direction: rtl;
+  text-align: right;
 }
 
 .section-title {
   font-family: 'Poppins', sans-serif;
-  border-bottom: 3px solid #fff;
+  border-bottom: 8px solid #fff;
   display: inline-block;
   font-size: 58px;
+  margin: 0 0 1rem 0;
 }
 
 .about-section img {
   object-fit: cover;
+  width: 100%;
   height: 100%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 @media (max-width: 768px) {
   .about-section img {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
 }
