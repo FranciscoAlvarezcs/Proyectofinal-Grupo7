@@ -1,95 +1,33 @@
-* {
-  font-family: "Anantason Condensed", sans-serif;
-}
-
-/* HEADER */
-header {
-  background-color: rgba(0, 0, 0, 0.63); /* negro translúcido */
-  border-bottom: 2px solid #a30000;
-  color: #fff;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(6px);
-}
-
-/* BODY */
 body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f9fa;
   margin: 0;
-  padding-top: 90px; /* espacio para el header fijo */
-  background-color: #111;
-  color: #fff;
+  padding: 0;
 }
 
-/* LOGO */
-.navbar-brand img {
-  height: 90px; /* 🔹 más grande */
-  width: auto;
-  transition: all 0.3s ease;
+.about-section {
+  background: linear-gradient(100deg, #b1303e, #4b0034);
+  max-width: 1100px;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
-/* MENÚ */
-.navbar-nav .nav-link {
-  color: #ccc !important;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 3px solid #fff;
+  display: inline-block;
+  font-size: 58px;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #fff !important;
-  text-decoration: underline;
-}
-
-/* ICONO DE INICIO */
-.icono-inicio i {
-  font-size: 1.5rem; /* un poquito más grande */
-  color: #ccc;
-  transition: all 0.3s;
-}
-
-.icono-inicio i:hover {
-  color: #fff;
-  transform: scale(1.15);
-}
-
-/* 📱 RESPONSIVE DESIGN */
-@media (max-width: 992px) {
-  .navbar-brand img {
-    height: 75px;
-  }
+.about-section img {
+  object-fit: cover;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
-  .navbar-brand img {
-    height: 65px;
-  }
-
-  .navbar-nav .nav-link {
-    text-align: center;
-    display: block;
-    padding: 10px 0;
-  }
-
-  .icono-inicio {
-    display: none !important; /* Oculta el icono de inicio en móviles */
+  .about-section img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 0;
   }
 }
-
-@media (max-width: 480px) {
-  .navbar-brand img {
-    height: 55px;
-  }
-}
-
-/* AJUSTE DE POSICIÓN DEL MENÚ */
-.navbar-nav {
-  margin-left: 10px;
-}
-
-/* MENÚ EN DOS LÍNEAS */
-.navbar-nav .nav-link {
-  line-height: 1.1;
-  text-align: center;
-} 
