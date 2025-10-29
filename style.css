@@ -2,9 +2,8 @@
   font-family: "Anantason Condensed", sans-serif;
 }
 
-/* HEADER */
 header {
-  background-color: rgba(0, 0, 0, 0.63); /* negro translúcido */
+  background-color: rgba(0, 0, 0, 0.63);
   border-bottom: 2px solid #a30000;
   color: #fff;
   position: fixed;
@@ -14,22 +13,19 @@ header {
   backdrop-filter: blur(6px);
 }
 
-/* BODY */
 body {
   margin: 0;
-  padding-top: 90px; /* espacio para el header fijo */
+  padding-top: 90px;
   background-color: #111;
   color: #fff;
 }
 
-/* LOGO */
 .navbar-brand img {
-  height: 90px; /* 🔹 más grande */
+  height: 40px;
   width: auto;
   transition: all 0.3s ease;
 }
 
-/* MENÚ */
 .navbar-nav .nav-link {
   color: #ccc !important;
   font-weight: 600;
@@ -42,11 +38,20 @@ body {
   text-decoration: underline;
 }
 
-/* ICONO DE INICIO */
 .icono-inicio i {
-  font-size: 1.5rem; /* un poquito más grande */
+  font-size: 1.5rem;
   color: #ccc;
   transition: all 0.3s;
+}
+
+.navbar-nav {
+  margin-left: 0;
+  padding-right: 10rem;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
 }
 
 .icono-inicio i:hover {
@@ -54,7 +59,6 @@ body {
   transform: scale(1.15);
 }
 
-/* 📱 RESPONSIVE DESIGN */
 @media (max-width: 992px) {
   .navbar-brand img {
     height: 75px;
@@ -73,7 +77,7 @@ body {
   }
 
   .icono-inicio {
-    display: none !important; /* Oculta el icono de inicio en móviles */
+    display: none !important;
   }
 }
 
@@ -83,13 +87,11 @@ body {
   }
 }
 
-/* AJUSTE DE POSICIÓN DEL MENÚ */
 .navbar-nav {
   margin-left: 10px;
 }
 
-/* MENÚ EN DOS LÍNEAS */
 .navbar-nav .nav-link {
   line-height: 1.1;
   text-align: center;
-} 
+}
