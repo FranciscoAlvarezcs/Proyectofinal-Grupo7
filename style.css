@@ -1,7 +1,15 @@
+/*recursos globales*/
 * {
   font-family: "Anantason Condensed", sans-serif;
 }
 
+body {
+  margin: 0;
+  background-color: #111;
+  color: #fff;
+}
+
+/*Header*/
 header {
   background-color: rgba(0, 0, 0, 0.63);
   border-bottom: 2px solid #a30000;
@@ -13,17 +21,20 @@ header {
   backdrop-filter: blur(6px);
 }
 
-body {
-  margin: 0;
-  padding-top: 90px;
-  background-color: #111;
-  color: #fff;
-}
-
 .navbar-brand img {
   height: 40px;
   width: auto;
   transition: all 0.3s ease;
+}
+
+.navbar-nav {
+  margin-left: 10px;
+  padding-right: 10rem;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-nav .nav-link {
@@ -31,6 +42,8 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.7px;
+  line-height: 1.1;
+  text-align: center;
 }
 
 .navbar-nav .nav-link:hover {
@@ -44,20 +57,11 @@ body {
   transition: all 0.3s;
 }
 
-.navbar-nav {
-  margin-left: 0;
-  padding-right: 10rem;
-}
-
-.navbar-nav .nav-item {
-  display: flex;
-  align-items: center;
-}
-
 .icono-inicio i:hover {
   color: #fff;
   transform: scale(1.15);
 }
+
 
 @media (max-width: 992px) {
   .navbar-brand img {
@@ -87,11 +91,53 @@ body {
   }
 }
 
-.navbar-nav {
-  margin-left: 10px;
+
+/*video bienvenida*/
+.video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
 }
 
-.navbar-nav .nav-link {
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+@media (max-aspect-ratio: 9/16), (max-width: 768px) {
+  .video-overlay {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+
+.video-overlay h1 {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin: 0;
   line-height: 1.1;
-  text-align: center;
+}
+
+.video-overlay p {
+  font-family: 'Gothic A1', sans-serif;
+  font-style: italic;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: clamp(2rem, 3vw, 1.5rem);
 }
