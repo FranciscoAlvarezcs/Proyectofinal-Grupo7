@@ -1,11 +1,9 @@
-/* Tipografía personalizada */
 body {
   font-family: "Anantason Condensed", sans-serif;
   background-color: #111;
   color: #fff;
 }
 
-/* Título principal */
 h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -15,7 +13,6 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* Cards de autos */
 .card {
   border: none;
   border-radius: 10px;
@@ -28,7 +25,6 @@ h2 {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-/* Imagen del auto */
 .card-img-top {
   height: 220px;
   object-fit: cover;
@@ -39,7 +35,6 @@ h2 {
   transform: scale(1.03);
 }
 
-/* Etiqueta del modelo */
 .card-footer {
   background-color: #a30000;
   font-size: 1rem;
@@ -47,7 +42,6 @@ h2 {
   border-top: none;
 }
 
-/* Capa superpuesta con info */
 .info-overlay {
   position: absolute;
   bottom: 60px;
@@ -66,7 +60,6 @@ h2 {
   opacity: 1;
 }
 
-/* Responsive para pantallas medianas */
 @media (max-width: 768px) {
   .card-img-top {
     height: 180px;
@@ -81,7 +74,6 @@ h2 {
   }
 }
 
-/* Responsive para pantallas chicas */
 @media (max-width: 576px) {
   .card-img-top {
     height: 160px;
