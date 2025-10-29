@@ -1,86 +1,64 @@
 body {
   font-family: "Anantason Condensed", sans-serif;
-  background-color: #111;
+  background-color: #000;
   color: #fff;
 }
 
-h2 {
-  text-transform: uppercase;
+.pregunta {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 0;
+}
+
+.titulo-contacto {
+  font-size: 2.5rem;
+  font-weight: bold;
   letter-spacing: 1px;
-  font-weight: 700;
   border-bottom: 2px solid #a30000;
+  display: inline-block;
   padding-bottom: 10px;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
-.card {
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
-.card-img-top {
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card-img-top:hover {
-  transform: scale(1.03);
-}
-
-.card-footer {
-  background-color: #a30000;
-  font-size: 1rem;
-  padding: 10px;
-  border-top: none;
-}
-
-.info-overlay {
-  position: absolute;
-  bottom: 60px;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+.campo,
+.campo-mensaje {
+  background-color: transparent;
+  border: 1px solid #a30000;
   color: #fff;
-  padding: 10px;
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
 }
 
-.card-hover:hover .info-overlay {
-  opacity: 1;
+.campo::placeholder,
+.campo-mensaje::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.btn-enviar {
+  background: linear-gradient(to bottom, #a30000, #c00040);
+  color: #fff;
+  border: none;
+  padding: 12px 40px;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn-enviar:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-  .card-img-top {
-    height: 180px;
+  .titulo-contacto {
+    font-size: 2rem;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .card-footer {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .card-img-top {
-    height: 160px;
-  }
-
-  .card-footer {
-    font-size: 0.9rem;
-    padding: 8px;
+  .btn-enviar {
+    width: 100%;
+    text-align: center;
   }
 }
