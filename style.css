@@ -75,11 +75,6 @@ header {
   .navbar-brand img { 
     height: 65px; 
   } 
-  .navbar-nav .nav-link { 
-    text-align: center; 
-    display: block; 
-    padding: 10px 0; 
-  } 
   .icono-inicio { 
     display: none !important; 
   } 
@@ -90,6 +85,68 @@ header {
     height: 55px; 
   } 
 }
+
+@media (max-width: 991.98px) {
+  /* Estilos del contenedor del menú desplegable */
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;            /* aparece justo debajo del header */
+    left: 0;
+    right: 0;
+    width: 100vw;         /* ocupa el ancho completo del viewport */
+    background-color: rgba(0, 0, 0, 0.95); /* fondo oscuro */
+    padding: 2rem 0;      /* espacio vertical interior */
+    text-align: center;   /* centra el texto */
+    border-top: 2px solid #a30000;
+    z-index: 999;
+    animation: desplegar 0.3s ease forwards;
+  }
+
+  /* Animación suave al aparecer */
+  @keyframes desplegar {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Ítems del menú */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;   /* vertical */
+    align-items: center;      /* centra horizontalmente los ítems */
+    gap: 1rem;                /* separación entre ítems */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Links del menú */
+  .navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link:hover {
+    text-decoration: underline;
+    color: #a30000 !important;
+  }
+
+  /* Oculta el ícono de inicio cuando está el menú abierto */
+  .icono-inicio {
+    display: none !important;
+  }
+}
+
 
 
 /* video bienvenida */
