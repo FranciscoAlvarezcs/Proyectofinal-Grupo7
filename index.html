@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Atkinson+Hyperlegible:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Formulariostyle.css">
 </head>
 
 <body>
@@ -126,7 +127,6 @@
 <section class="container py-5">
   <h2 class="text-center mb-5 border-bottom pb-3">Destacado de nuestro stock</h2>
   <div class="row g-4">
-
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card bg-dark border-0 position-relative card-hover">
         <img src="imagenes/corrolla.jpg" class="card-img-top" alt="Toyota Corolla">
@@ -192,7 +192,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -208,6 +207,34 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
     </article>
+  </div>
+</section>
+
+<section class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8 text-center text-white mb-5">
+      <div class="custom-divider mb-3"></div>
+      <p class="h6 mb-2">¿Te interesó alguna unidad? ¿Querés vender tu auto?</p>
+      <h2 class="display-3 fw-bold contact-title">CONTACTANOS</h2>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+      <form class="row g-4">
+        <div class="col-md-6">
+          <textarea class="form-control custom-input message-area" placeholder="Mensaje..." rows="10" id="mensaje"></textarea>
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-between">
+          <div>
+            <input type="text" class="form-control custom-input mb-4" placeholder="Nombre y Apellido" id="nombre">
+            <input type="email" class="form-control custom-input mb-4" placeholder="Correo electrónico" id="email">
+            <input type="tel" class="form-control custom-input mb-4" placeholder="Teléfono" id="telefono">
+          </div>
+          <button type="submit" class="btn btn-lg custom-submit-btn w-100">ENVIAR</button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
