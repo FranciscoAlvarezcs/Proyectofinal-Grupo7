@@ -192,14 +192,14 @@ header {
 
 .carousel-caption-top h2 {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 80px;
+  font-size: clamp(2rem, 6vw, 80px);
   font-weight: 700;
   font-style: italic;
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 19px;
   line-height: 1.1;
-  letter-spacing: -6px;
+  letter-spacing: -2px;
 }
 
 .carousel-image-container {
@@ -228,7 +228,7 @@ header {
 }
 
 @media (max-width: 768px) {
-  .carousel-caption-top h2 { font-size: 50px; }
+  .carousel-caption-top h2 { font-size: clamp(1.5rem, 8vw, 50px); }
   .carousel-image-container { height: 300px; }
   .fixed-img { width: 95%; height: 95%; }
   .carousel-caption-top small { font-size: 16px; }
@@ -242,16 +242,18 @@ header {
   border-radius: 1rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
-  overflow: hidden;
-  padding: 1rem; /* 🔹 Alineado con la segunda */
+  padding: 1rem;
+  overflow: visible;
 }
 
 .section-title {
   font-family: 'Poppins', sans-serif;
   border-bottom: 8px solid #fff;
   display: inline-block;
-  font-size: 58px;
+  font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 1rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 @media (max-width: 768px) {
@@ -260,20 +262,17 @@ header {
   }
 }
 
-/* ---------------------- SEGUNDA TARJETA ---------------------- */
-
 .about-section-second {
   font-family: 'Lato', sans-serif;
   background: linear-gradient(260deg, #b1303e, #4b0034);
   max-width: 1100px;
   border-radius: 1rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  overflow: visible;
   margin: 0 auto;
-  padding: 1rem; /* 🔹 igual que la primera */
+  padding: 1rem;
 }
 
-/* 🔹 Mantiene orientación de derecha a izquierda */
 .about-section-second article {
   direction: rtl;
   unicode-bidi: embed;
@@ -284,10 +283,12 @@ header {
   font-family: 'Poppins', sans-serif;
   border-bottom: 8px solid #fff;
   display: inline-block;
-  font-size: 58px; /* 🔹 Igual que la primera */
+  font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 1rem;
-  padding-top: 0.5rem; /* 🔹 Controla altura del título */
-  padding-right: 1rem; /* 🔹 Mueve el título más adentro */
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 .about-section-second img {
@@ -309,4 +310,76 @@ header {
   }
 }
 
+body {
+  font-family: "Anton", sans-serif;
+  background-color: #111;
+  color: #fff;
+}
 
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-bottom: 2px solid #a30000;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.03);
+}
+
+.card-footer {
+  background-color: #a30000;
+  font-size: 1rem;
+  padding: 10px;
+  border-top: none;
+}
+
+.info-overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-hover:hover .info-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .card-img-top { height: 180px; }
+  h2 { font-size: 1.5rem; }
+  .card-footer { font-size: 1rem; }
+}
+
+@media (max-width: 576px) {
+  .card-img-top { height: 160px; }
+  .card-footer { font-size: 0.9rem; padding: 8px; }
+}
