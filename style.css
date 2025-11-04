@@ -459,3 +459,22 @@ body {
     transform: translateY(-1px) !important;
     color: white !important;
 }
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 576px) and (orientation: portrait) {
+  .whatsapp-btn {
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+    bottom: 25px;
+    right: 25px;
+  }
+}
