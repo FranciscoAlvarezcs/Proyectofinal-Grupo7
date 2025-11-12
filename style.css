@@ -94,3 +94,33 @@ body {
     margin-top: 0.3rem;
   }
 }
+
+/* --- ESTA ES LA PARTE IMPORTANTE (CSS FINAL) --- */
+/* Animación de deslizamiento de DERECHA a IZQUIERDA */
+
+/* 1. Estado INICIAL (oculto y a la derecha) */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateX(30px); /* Empieza 30px a la DERECHA */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 2. Estado FINAL (visible y en su posición) */
+.anim-fade-up.animate-now {
+  opacity: 1;
+  transform: translateX(0); /* Se desliza a su posición original */
+}
+
+/* 3. Retrasos (Delays) escalonados */
+.carousel-caption-top small.anim-fade-up {
+  transition-delay: 0.1s;
+}
+.carousel-caption-top h2.anim-fade-up {
+  transition-delay: 0.2s;
+}
+.carousel-image-container.anim-fade-up {
+  transition-delay: 0.4s;
+}
+.carousel-subtitle.anim-fade-up {
+  transition-delay: 0.6s;
+}
