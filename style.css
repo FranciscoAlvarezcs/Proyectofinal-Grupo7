@@ -230,6 +230,7 @@ header {
   color: #ccc;
   line-height: 0.9;
   margin-top: 0.5rem;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -314,6 +315,31 @@ header {
   }
 }
 
+.anim-fade-up {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.anim-fade-up.animate-now {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel-caption-top small.anim-fade-up {
+  transition-delay: 0.1s;
+}
+
+.carousel-caption-top h2.anim-fade-up {
+  transition-delay: 0.2s;
+}
+
+.carousel-image-container.anim-fade-up {
+  transition-delay: 0.4s;
+}
+
+.carousel-subtitle.anim-fade-up {
+  transition-delay: 0.6s;
 body {
   font-family: "Anton", sans-serif;
   background-color: #111;
