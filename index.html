@@ -14,140 +14,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>  
+<body id="inicio">
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/Logo2.png" alt="Logo de Ranchito AUTOS">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item mx-3"><a class="nav-link" href="#Contacto">Contacto</a></li>
-        <li class="nav-item mx-3"><a class="nav-link" href="#QuienesSomos">Quiénes<br>Somos</a></li>
-        <li class="nav-item mx-3"><a class="nav-link" href="#PorqueElegirnos">Por qué<br>Elegirnos</a></li>
-        <li class="nav-item mx-3"><a class="nav-link" href="#Stock">Stock</a></li>
-      </ul>
-    </div>
-    <div class="icono-inicio d-none d-lg-block">
-      <a href="index.html"><i class="bi bi-house-fill"></i></a>
-    </div>
-  </nav>
-</header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="image/Logo2.png" alt="Logo de Ranchito AUTOS">
+      </a>
 
-<section class="video-container">
-  <video autoplay muted loop playsinline>
-    <source src="videos/Consesionariaautoya.mp4" type="video/mp4">
-  </video>
-  <div class="video-overlay">
-    <h1 class="fw-bold">RANCHITO AUTOS</h1>
-    <p>La mejor selección en <br> autos usados</p>
-  </div>
-</section>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<section id="customCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="position-relative text-center py-4">
-        <div class="carousel-caption-top">
-          <small class="anim-fade-up">Descubre</small>
-          <h2 class="anim-fade-up">QUIÉNES SOMOS</h2>
-        </div>
-        <div class="d-flex justify-content-center my-3 carousel-image-container anim-fade-up">
-          <img src="images/carrousel1.png" class="fixed-img" alt="Equipo">
-        </div>
-        <p class="carousel-subtitle anim-fade-up">Somos un equipo de profesionales apasionados, <br>dedicados a ofrecer la mejor calidad.</p>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#" onclick="irA('contacto.html', event)">Contacto</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#" onclick="irA('quienes-somos.html', event)">Quiénes<br>Somos</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#" onclick="irA('porque-elegirnos.html', event)">Por qué<br>Elegirnos</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#" onclick="irA('stock.html', event)">Stock</a>
+          </li>
+        </ul>
       </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="position-relative text-center py-4">
-        <div class="carousel-caption-top">
-          <small class="anim-fade-up">Descubre</small>
-          <h2 class="anim-fade-up">POR QUÉ ELEGIRNOS</h2>
-        </div>
-        <div class="d-flex justify-content-center my-3 carousel-image-container anim-fade-up">
-          <img src="images/carrousel2.png" class="fixed-img" alt="Servicios">
-        </div>
-        <p class="carousel-subtitle anim-fade-up">Nuestra experiencia y compromiso garantizan <br>la satisfacción total de nuestros clientes.</p>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="position-relative text-center py-4">
-        <div class="carousel-caption-top">
-          <small class="anim-fade-up">Descubre</small>
-          <h2 class="anim-fade-up">VISÍTANOS</h2>
-        </div>
-        <div class="d-flex justify-content-center my-3 carousel-image-container anim-fade-up">
-          <img src="images/carrousel3.png" class="fixed-img" alt="Equipo">
-        </div>
-        <p class="carousel-subtitle anim-fade-up">Te esperamos en nuestra sucursal <br>para brindarte la atención que mereces.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
-  </button>
-</section>
-
-<section id="QuienesSomos" class="container py-5">
-  <div class="row align-items-center text-white shadow-lg overflow-hidden mx-auto about-section">
-    <figure class="col-md-5 p-0 mb-0">
-      <img src="images/quienesSomos-Asset.png" alt="Dos técnicos trabajando" class="img-fluid w-100 h-100 object-fit-cover rounded-start-4 rounded-top-4 rounded-md-start-4">
-    </figure>
-    <article class="col-md-7 p-4">
-      <h2 class="fw-bold section-title">Sobre nosotros</h2>
-      <p>En nuestra concesionaria, nos dedicamos a redefinir la experiencia de comprar un auto usado. Con años de trayectoria en el sector, entendemos que la confianza es lo más importante. Por eso, cada vehículo de nuestro inventario es sometido a un riguroso proceso de inspección y certificación. Nuestro equipo de técnicos calificados revisa cada detalle para asegurar que recibas un auto en óptimas condiciones, garantizando tu seguridad y tranquilidad.</p>
-      <p>Creemos que encontrar tu próximo auto debe ser un proceso emocionante y sencillo. Nuestro equipo de asesores está comprometido a escucharte y entender tus necesidades, sin presiones. Te ofrecemos una amplia gama de modelos y marcas seleccionadas, con opciones de financiación claras y transparentes que se adaptan a tu presupuesto. Te invitamos a visitarnos y descubrir por qué tantos clientes nos eligen y recomiendan.</p>
-    </article>
-  </div>
-</section>
-
-<section id="Stock" class="container py-5">
-  <h2 class="text-center mb-5 border-bottom pb-3">Destacado de nuestro stock</h2>
-  <div class="row g-4">
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card bg-dark border-0 position-relative card-hover">
-        <img src="images/corrolla.jpg" class="card-img-top" alt="Toyota Corolla">
-        <div class="card-footer bg-danger text-white text-center fw-bold">Toyota Corolla</div>
-        <div class="info-overlay">
-          <p>Año: 2022</p>
-          <p>Kilometraje: 75.000km</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card bg-dark border-0 position-relative card-hover">
-        <img src="images/ford focus.jpg" class="card-img-top" alt="Ford Focus Ghia 2.0">
-        <div class="card-footer bg-danger text-white text-center fw-bold">Ford Focus</div>
-        <div class="info-overlay">
-          <p>Año: 2017</p>
-          <p>Kilometraje: 110.000km</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card bg-dark border-0 position-relative card-hover">
-        <img src="images/chevrolet cruze.jpg" class="card-img-top" alt="Chevrolet Cruze">
-        <div class="card-footer bg-danger text-white text-center fw-bold">Chevrolet Cruze</div>
-        <div class="info-overlay">
-          <p>Año: 2018</p>
-          <p>Kilometraje: 50.500km</p>
-        </div>
-      </div>
-    </div>
 
       <div class="icono-inicio d-none d-lg-block">
         <a href="index.html">
@@ -156,106 +58,8 @@
       </div>
     </nav>
   </header>
-    </div>
 
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card bg-dark border-0 position-relative card-hover">
-        <img src="images/vw gol.jpg" class="card-img-top" alt="Volkswagen Gol Trend">
-        <div class="card-footer bg-danger text-white text-center fw-bold">Volkswagen Gol Trend</div>
-        <div class="info-overlay">
-          <p>Año: 2019</p>
-          <p>Kilometraje: 150.000km</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card bg-dark border-0 position-relative card-hover">
-        <img src="images/hilux.jpg" class="card-img-top" alt="Toyota Hilux">
-        <div class="card-footer bg-danger text-white text-center fw-bold">Toyota Hilux</div>
-        <div class="info-overlay">
-          <p>Año: 2023</p>
-          <p>Kilometraje: 90.000km</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="PorqueElegirnos" class="container py-5">
-  <div class="row g-4"> </div>
-  <div class="row align-items-center text-white shadow-lg overflow-hidden mx-auto about-section-second">
-    <figure class="col-md-5 p-0 mb-0 order-1 order-md-2">
-      <img src="images/porqueElegirnos.png" alt="Dos personas del trabajo saludando" class="img-fluid w-100 h-100 object-fit-cover rounded-end-4 rounded-top-4 rounded-md-end-4">
-    </figure>
-    <article class="col-md-7 p-4 order-2 order-md-1">
-      <div class="mb-3">
-        <h2 class="fw-bold section-title-second">Por qué Elegirnos</h2>
-      </div>
-      <p>Elegirnos es elegir confianza. Cada auto en nuestro stock ha pasado por un exhaustivo chequeo de más de 150 puntos vitales. No vendemos autos que no compraríamos para nosotros mismos. Esta garantía de calidad nos permite ofrecer vehículos que no solo se ven bien, sino que funcionan a la perfección, dándote completa seguridad en tu inversión</p>
-      <p>Ofrecemos una experiencia de compra radicalmente diferente. Creemos en la transparencia total, sin costos ocultos ni tácticas de presión. Nuestro equipo está aquí para asesorarte, entender tus necesidades y ayudarte a encontrar el auto ideal dentro de tu presupuesto. Con opciones de financiación claras y un servicio postventa real, estamos para acompañarte en cada kilómetro  </p>
-    </article>
-  </div>
-</section>
-
-<section id="Contacto" class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-10 col-xl-8 text-center text-white mb-5">
-      <div class="custom-divider mb-3"></div>
-      <p class="h6 mb-2">¿Te interesó alguna unidad? ¿Querés vender tu auto?</p>
-      <h2 class="display-3 fw-bold contact-title">CONTACTANOS</h2>
-    </div>
-  </div>
-
-  <div class="row justify-content-center">
-    <div class="col-lg-10 col-xl-8">
-      <form class="row g-4">
-        <div class="col-md-6">
-          <textarea class="form-control custom-input message-area" placeholder="Mensaje..." rows="10" id="mensaje"></textarea>
-        </div>
-        <div class="col-md-6 d-flex flex-column justify-content-between">
-          <div>
-            <input type="text" class="form-control custom-input mb-4" placeholder="Nombre y Apellido" id="nombre" autocomplete="name">
-            <input type="email" class="form-control custom-input mb-4" placeholder="Correo electrónico" id="email" autocomplete="email">
-            <input type="tel" class="form-control custom-input mb-4" placeholder="Teléfono" id="telefono" autocomplete="tel">
-          </div>
-          <button type="submit" class="btn btn-lg custom-submit-btn w-100">ENVIAR</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer class="bg-dark text-white py-4 mt-auto">
-  <div class="container">
-    <div class="row text-center text-md-start align-items-center">
-      <div class="col-12 col-md-4 mb-4 mb-md-0">
-        <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i>3815601704</p>
-        <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i>RanchitoAutos@Trainspotting.com</p>
-        <p class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>171 Lake Washington Blvd E, Seattle, WA 98112, Estados Unidos.</p>
-      </div>
-      <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
-        <h6 class="text-uppercase mb-3">Redes Sociales</h6>
-        <a href="https://www.instagram.com/pepsic0__/" class="text-white fs-5 d-inline-block bg-black rounded-circle p-2 mx-1"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.instagram.com/pepsic0__/" class="text-white fs-5 d-inline-block bg-black rounded-circle p-2 mx-1"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/pepsic0__/" class="text-white fs-5 d-inline-block bg-black rounded-circle p-2 mx-1"><i class="bi bi-twitter-x"></i></a>
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <img src="images/Logo2.png" alt="Logo" class="img-fluid mb-3" style="max-width: 120px;">
-        <p class="mb-0">© 2025 RanchitoAutos. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<section id="wspicon"> 
-  <a href="https://wa.me/543815601704" target="_blank"
-    class="btn btn-success d-flex align-items-center justify-content-center rounded-circle shadow-lg whatsapp-btn">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script> 
 </body>
 </html>
