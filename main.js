@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function animacionCarrousel() {
 
     const carouselElement = document.getElementById('customCarousel');
     let hasAnimatedOnce = false;
@@ -51,5 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, observerOptions);
 
     carouselObserver.observe(carouselElement);
+}
 
-});
+animacionCarrousel();
