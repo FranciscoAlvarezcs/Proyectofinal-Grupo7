@@ -1,193 +1,110 @@
 * {
-
   font-family: "Anantason Condensed", sans-serif;
-
 }
 
 
 
 header {
-
   background-color: rgba(0, 0, 0, 0.63);
-
   border-bottom: 2px solid #a30000;
-
   color: #fff;
-
   position: fixed;
-
   width: 100%;
-
   top: 0;
-
   z-index: 1000;
-
   backdrop-filter: blur(6px);
-
 }
 
-
-
 body {
-
   margin: 0;
-
   padding-top: 90px;
-
   background-color: #111;
-
   color: #fff;
-
 }
 
 
 
 .navbar-brand img {
-
   height: 40px;
-
   width: auto;
-
   transition: all 0.3s ease;
-
 }
 
 
 
 .navbar-nav .nav-link {
-
   color: #ccc !important;
-
   font-weight: 600;
-
   text-transform: uppercase;
-
   letter-spacing: 0.7px;
-
 }
-
 
 
 .navbar-nav .nav-link:hover {
-
   color: #fff !important;
-
   text-decoration: underline;
-
 }
-
 
 
 .icono-inicio i {
-
   font-size: 1.5rem;
-
   color: #ccc;
-
   transition: all 0.3s;
-
 }
-
-
 
 .navbar-nav {
-
   margin-left: 0;
-
   padding-right: 10rem;
-
 }
-
-
 
 .navbar-nav .nav-item {
-
   display: flex;
-
   align-items: center;
-
 }
-
 
 
 .icono-inicio i:hover {
-
   color: #fff;
-
   transform: scale(1.15);
-
 }
-
 
 
 @media (max-width: 992px) {
-
   .navbar-brand img {
-
     height: 75px;
-
   }
-
+  
 }
-
-
 
 @media (max-width: 768px) {
-
   .navbar-brand img {
-
     height: 65px;
-
   }
-
-
 
   .navbar-nav .nav-link {
-
     text-align: center;
-
     display: block;
-
     padding: 10px 0;
-
   }
-
-
 
   .icono-inicio {
-
     display: none !important;
-
   }
 
 }
-
-
 
 @media (max-width: 480px) {
-
   .navbar-brand img {
-
     height: 55px;
-
   }
 
 }
 
-
-
 .navbar-nav {
-
   margin-left: 10px;
-
 }
 
-
-
 .navbar-nav .nav-link {
-
   line-height: 1.1;
-
   text-align: center;
-
 }
