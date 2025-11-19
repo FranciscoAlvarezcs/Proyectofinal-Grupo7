@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    const inputs = form.querySelectorAll('.campo');
-    const nombreInput = inputs[0];
-    const emailInput = inputs[1];
-    const telefonoInput = inputs[2];
-    const mensajeInput = form.querySelector('.campo-mensaje');
+    const form = document.querySelector('form');
+    const nombreInput = document.getElementById('nombre');
+    const emailInput = document.getElementById('email');
+    const telefonoInput = document.getElementById('telefono');
+    const mensajeInput = document.getElementById('mensaje');
 
     function mostrarError(input, mensaje) {
         const errorPrevio = input.parentElement.querySelector('.error-message');
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (errorMessage) {
             errorMessage.remove();
         }
-        input.style.borderColor = '#a30000';
+        input.style.borderColor = '#5C1D38';
     }
 
     function validarEmail(email) {
@@ -47,14 +46,15 @@ document.addEventListener('DOMContentLoaded', function() {
         return mensaje.trim().length >= 10;
     }
 
-    nombreInput.addEventListener('input', () => limpiarError(nombreInput));
-    emailInput.addEventListener('input', () => limpiarError(emailInput));
-    telefonoInput.addEventListener('input', () => limpiarError(telefonoInput));
-    mensajeInput.addEventListener('input', () => limpiarError(mensajeInput));
-
-    telefonoInput.addEventListener('input', function(e) {
-        this.value = this.value.replace(/[^0-9\s-]/g, '');
-    });
+    if (nombreInput) nombreInput.addEventListener('input', () => limpiarError(nombreInput));
+    if (emailInput) emailInput.addEventListener('input', () => limpiarError(emailInput));
+    if (telefonoInput) {
+        telefonoInput.addEventListener('input', function() {
+            limpiarError(this);
+            this.value = this.value.replace(/[^0-9\s-]/g, '');
+        });
+    }
+    if (mensajeInput) mensajeInput.addEventListener('input', () => limpiarError(mensajeInput));
 
     function mostrarExito() {
         const successDiv = document.createElement('div');
@@ -72,47 +72,108 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        let formValido = true;
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let formValido = true;
 
-        if (!validarNombre(nombreInput.value)) {
-            mostrarError(nombreInput, 'Por favor, ingresa tu nombre completo (mínimo 3 caracteres)');
-            formValido = false;
-        }
-
-        if (!validarEmail(emailInput.value)) {
-            mostrarError(emailInput, 'Por favor, ingresa un correo electrónico válido');
-            formValido = false;
-        }
-
-        if (!validarTelefono(telefonoInput.value)) {
-            mostrarError(telefonoInput, 'Por favor, ingresa un número de teléfono válido (mínimo 8 dígitos)');
-            formValido = false;
-        }
-
-        if (!validarMensaje(mensajeInput.value)) {
-            mostrarError(mensajeInput, 'Por favor, escribe un mensaje (mínimo 10 caracteres)');
-            formValido = false;
-        }
-
-        if (formValido) {
-            console.log('Formulario válido, datos a enviar:');
-            console.log({
-                nombre: nombreInput.value,
-                email: emailInput.value,
-                telefono: telefonoInput.value,
-                mensaje: mensajeInput.value
-            });
-
-            mostrarExito();
-            form.reset();
-        } else {
-            const primerError = document.querySelector('.error-message');
-            if (primerError) {
-                primerError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (!validarNombre(nombreInput.value)) {
+                mostrarError(nombreInput, 'Por favor, ingresa tu nombre completo (mínimo 3 caracteres)');
+                formValido = false;
             }
+
+            if (!validarEmail(emailInput.value)) {
+                mostrarError(emailInput, 'Por favor, ingresa un correo electrónico válido');
+                formValido = false;
+            }
+
+            if (!validarTelefono(telefonoInput.value)) {
+                mostrarError(telefonoInput, 'Por favor, ingresa un número de teléfono válido (mínimo 8 dígitos)');
+                formValido = false;
+            }
+
+            if (!validarMensaje(mensajeInput.value)) {
+                mostrarError(mensajeInput, 'Por favor, escribe un mensaje (mínimo 10 caracteres)');
+                formValido = false;
+            }
+
+            if (formValido) {
+                console.log('Formulario válido, datos a enviar:');
+                console.log({
+                    nombre: nombreInput.value,
+                    email: emailInput.value,
+                    telefono: telefonoInput.value,
+                    mensaje: mensajeInput.value
+                });
+
+                mostrarExito();
+                form.reset();
+            } else {
+                const primerError = document.querySelector('.error-message');
+                if (primerError) {
+                    primerError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    }
+});
+
+function animacionCarrousel() {
+    const carouselElement = document.getElementById('customCarousel');
+    
+    if (!carouselElement) return;
+    
+    let hasAnimatedOnce = false;
+
+    function runAnimations(slide) {
+        const animatedElements = slide.querySelectorAll('.anim-fade-up');
+        animatedElements.forEach(el => {
+            el.classList.add('animate-now');
+        });
+    }
+
+    function resetAnimations(slide) {
+        const animatedElements = slide.querySelectorAll('.anim-fade-up');
+        animatedElements.forEach(el => {
+            el.classList.remove('animate-now');
+        });
+    }
+
+    carouselElement.addEventListener('slide.bs.carousel', function (event) {
+        const oldSlide = carouselElement.querySelectorAll('.carousel-item')[event.from];
+        if (oldSlide) {
+            resetAnimations(oldSlide);
         }
     });
-});
+
+    carouselElement.addEventListener('slid.bs.carousel', function (event) {
+        const newSlide = carouselElement.querySelectorAll('.carousel-item')[event.to];
+        if (newSlide) {
+            runAnimations(newSlide);
+        }
+    });
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const carouselObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimatedOnce) {
+                const initialActiveSlide = document.querySelector('#customCarousel .carousel-item.active');
+                if (initialActiveSlide) {
+                    runAnimations(initialActiveSlide);
+                }
+                hasAnimatedOnce = true;
+                observer.unobserve(carouselElement);
+            }
+        });
+    }, observerOptions);
+
+    carouselObserver.observe(carouselElement);
+}
+
+animacionCarrousel();
