@@ -347,76 +347,96 @@ body {
   color: #fff;
 }
 
-h2 {
-  text-transform: uppercase;
+.pregunta {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 0;
+}
+
+.titulo-contacto {
+  font-size: 2.5rem;
+  font-weight: bold;
   letter-spacing: 1px;
   font-weight: 700;
   margin-bottom: 30px;
 }
 
+.campo,
+.campo-mensaje {
+  background-color: transparent;
+  border: 1px solid #a30000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+}
+.campo::placeholder,
+.campo-mensaje::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
 .card {
   border: none;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card-hover:hover {
   transform: scale(1.02);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
-
 .card-img-top {
   height: 220px;
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease;
 }
-
 .card-img-top:hover {
   transform: scale(1.03);
 }
-
-.card-footer {
-  background-color: #a30000;
-  font-size: 1rem;
-  padding: 10px;
-  border-top: none;
 }
 
-.info-overlay {
-  position: absolute;
-  bottom: 60px;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+.campo::placeholder,
+.campo-mensaje::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.btn-enviar {
+  background: linear-gradient(to bottom, #a30000, #c00040);
   color: #fff;
-  padding: 10px;
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  border: none;
+  padding: 12px 40px;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
 }
 
-.card-hover:hover .info-overlay {
-  opacity: 1;
+.btn-enviar:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-  .card-img-top { height: 180px; }
+.card-img-top { height: 180px; }
   h2 { font-size: 1.5rem; }
   .card-footer { font-size: 1rem; }
+  .titulo-contacto {
+    font-size: 2rem;
+  }
+  .btn-enviar {
+    width: 100%;
+    text-align: center;
+  }
 }
-
 @media (max-width: 576px) {
   .card-img-top { height: 160px; }
   .card-footer { font-size: 0.9rem; padding: 8px; }
 }
-
 body {
     background-color: #090808 !important;
 }
-
 .contact-title {
     color: white !important;
     letter-spacing: 2px;
@@ -424,26 +444,22 @@ body {
     overflow: visible;
     display: inline-block;
 }
-
 @media (max-width: 768px) {
     .contact-title {
         font-size: 3rem;
     }
 }
-
 @media (max-width: 576px) {
     .contact-title {
         font-size: 2.5rem;
     }
 }
-
 .custom-divider {
     width: 80px;
     height: 2px;
     background-color: white;
     margin: 0 auto;
 }
-
 .custom-input, 
 .message-area {
     background-color: #000000 !important;
@@ -454,12 +470,10 @@ body {
     border-radius: 0.75rem !important;
     padding: 0.75rem 1rem !important;
 }
-
 .custom-input::placeholder,
 .message-area::placeholder {
     color: rgba(255, 255, 255, 0.7) !important;
 }
-
 .custom-input:focus, 
 .message-area:focus {
     background-color: #000000 !important;
@@ -467,7 +481,6 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(204, 68, 119, 0.25) !important;
     color: white !important;
 }
-
 .custom-submit-btn {
     background: linear-gradient(to right, #ff0000, #4b0034) !important; 
     color: white !important;
@@ -479,14 +492,12 @@ body {
     transition: all 0.3s ease !important;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-
 .custom-submit-btn:hover {
     background: linear-gradient(to left, #ff0000, #8E44AD) !important;
     opacity: 0.9 !important;
     transform: translateY(-1px) !important;
     color: white !important;
 }
-
 .whatsapp-btn {
   position: fixed;
   bottom: 20px;
@@ -495,7 +506,6 @@ body {
   height: 60px;
   font-size: 1.8rem;
 }
-
 @media (max-width: 576px) and (orientation: portrait) {
   .whatsapp-btn {
     width: 75px;
